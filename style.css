@@ -1,0 +1,49 @@
+.site-bar{padding:0 3.2rem;height:36px;width:100%;min-width:1200px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;position:relative;z-index:1;background-color:#dd940b}
+.site-bar a{display:block;color:#fff}
+.site-logo{display:block;height: 50%;width:10.5rem;background-image:url(./images/skull.png);background-repeat:no-repeat;background-position:center center;margin:0 8px}
+
+.home-layout{
+    position:relative;
+    z-index:0
+}
+.home-header-wrapper{
+    position:sticky;
+    top:0;
+    z-index:2
+}
+.home-header{
+    background-color:#141414;
+    background-image:url(/.jpg);
+    background-repeat:repeat;
+    background-size:auto;
+    background-position:0 0;
+    height:5rem;
+    padding-inline-start:2.4rem;
+    color:var(--psin-white-static);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;position:relative
+}
+.menutext{
+    color: #fff;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+.home-header-logo{display:block;width:3.2rem;color:var(--psin-white-static);position:relative}
+.home-header-logo:before{display:block;width:100%;padding:78.33333333333333% 0 0;content:'';position:relative;z-index:0}
+.home-header-logo img{width:100%;height:100%;-o-object-fit:contain;object-fit:contain;display:block;position:absolute;top:0;left:0;z-index:1}
+
+.home-header-login{color:var(--psin-white-static);padding:.2rem .2rem 0;-webkit-padding-before:.2rem;padding-block-start:.2rem;-webkit-padding-end:.2rem;padding-inline-end:.2rem;-webkit-padding-after:0;padding-block-end:0;-webkit-padding-start:.2rem;padding-inline-start:.2rem;text-decoration:none;font-weight:300}
+.header-warzone-logo{width:8.4rem;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);position:absolute;z-index:1;display:block}
+.header-warzone-logo:before{display:block;width:100%;padding:32.14285714285714% 0 0;content:'';position:relative;z-index:0}
+.header-warzone-logo img{width:100%;height:100%;-o-object-fit:contain;object-fit:contain;display:block;position:absolute;top:0;left:0;z-index:1}
+.text-a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--psin-black-200-static)}
+.text-a.text-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:98.6rem;margin-left:auto;margin-right:auto}
+.text-a>*{-webkit-margin-after:3rem;margin-block-end:3rem}.text-a>h2,.text-a>.h2{-webkit-margin-after:2rem;margin-block-end:2rem}
+.text-a>h3,.text-a>.h3{-webkit-margin-after:2rem;margin-block-end:2rem}.text-a>.btn-wrapper{-webkit-margin-before:1rem;margin-block-start:1rem}
+.text-a>:first-child{-webkit-margin-before:0;margin-block-start:0}.text-a>:last-child{-webkit-margin-after:0rem;margin-block-end:0rem}.text-a.text-white ul>li:before{background-color:#fff}
+.text-a.text-white ol>li:before{color:#fff}
+.home-header-register,.home-logout-btn{margin:0;height:100%}.ps-header-social{-webkit-margin-start:auto;margin-inline-start:auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+@media(min-width:2560px){.header-userbox-txt{font-size:1.2rem}}
