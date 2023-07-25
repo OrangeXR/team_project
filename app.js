@@ -18,32 +18,6 @@ mongoose.connect('mongodb+srv://TAMUSAwad:DBpassword1@webapplicationdevelopme.la
 });
 
 
-// Links
-app.get('/', (req, res) => { 
-  res.render('index'); 
-})
-
-app.get('/about', (req, res) => { 
-  res.render('about'); 
-})
-
-app.get('/contact', (req, res) => { 
-  res.render('contact'); 
-})
-
-app.get('/lookup', (req, res) => { 
-  res.render('lookup'); 
-})
-    
-app.get('/employees', (req, res) => { 
-  res.render('employees.ejs'); 
-})
-
-app.get('/', function(req, res) { 
-  res.sendFile(__dirname + "/employees.ejs") 
-})
-
-
 
 
 // Data Schema
@@ -73,11 +47,37 @@ app.get("/", function(req, res) { res.sendFile(__dirname + "/employees.ejs") })
 
 app.post("/", function(req, res){ let newViolation = new Violation({ 
   state: req.body.state, 
-  platenumber: req.body.platenumber, 
+  plateNumber: req.body.platenumber, 
   date: req.body.date, 
   location: req.body.location, 
   infraction: req.body.infraction }); 
   newViolation.save(); res.redirect('/'); })
+
+// Links
+app.get('/', (req, res) => { 
+  res.render('index'); 
+})
+
+app.get('/about', (req, res) => { 
+  res.render('about'); 
+})
+
+app.get('/contact', (req, res) => { 
+  res.render('contact'); 
+})
+
+app.get('/lookup', (req, res) => { 
+  res.render('lookup'); 
+})
+    
+app.get('/employees', (req, res) => { 
+  res.render('employees.ejs'); 
+})
+
+app.get('/', function(req, res) { 
+  res.sendFile(__dirname + "/employees.ejs") 
+})
+
 
 
 
