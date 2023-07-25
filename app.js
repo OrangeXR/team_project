@@ -43,7 +43,6 @@ app.get('/', (req, res) => {
 
 
 
-app.get("/", function(req, res) { res.sendFile(__dirname + "/employees.ejs") })
 
 app.post("/", function(req, res){ let newViolation = new Violation({ 
   state: req.body.state, 
@@ -78,6 +77,7 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + "/employees.ejs") 
 })
 
+app.get("/", function(req, res) { res.sendFile(__dirname + "/employees.ejs") })
 
 
 
