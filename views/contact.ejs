@@ -1,0 +1,33 @@
+<%- include("partials/header"); -%>
+
+
+
+
+
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="mailto:nobody@nobody.com" method="post" enctype="text/plain">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<br>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <br>
+
+    <br>
+    <label for="subject">Comments:</label><br>
+    <textarea id="subject" name="subject" placeholder="Please enter questions or comments..." style="width:500px; height:200px"></textarea>
+    <br>
+    <input type="submit" value="Send">
+  </form>
+
+
+
+
+
+
+
+
+<%- include("partials/footer"); -%>
