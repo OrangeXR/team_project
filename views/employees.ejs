@@ -86,7 +86,7 @@
 
   <div class="container"> 
     <%violationsList.forEach(violation => {%>
-      <p><%= violations.state %> - <%= violations.platenumber %> - <%= violations.date %> - <%= violations.location %> - <%= violations.infraction %></p>
+      <p><%= violation.state %> - <%= violation.platenumber %> - <%= violation.date %> - <%= violation.location %> - <%= violation.infraction %></p>
     <%})%>  
   </div>
 

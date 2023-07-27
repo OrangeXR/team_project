@@ -21,11 +21,11 @@ mongoose.connect('mongodb+srv://TAMUSAwad:DBpassword1@webapplicationdevelopme.la
 
 
 // Data Schema
-const violationsSchema = { 
-  state: String, 
-  plateNumber: String, 
-  date: String, 
-  location: String, 
+const violationsSchema = {
+  state: String,
+  plateNumber: String,
+  date: String,
+  location: String,
   infraction: String,
   blank: String,
 }
@@ -34,47 +34,53 @@ const Violation = mongoose.model('Violation', violationsSchema);
 
 
 app.get('/', (req, res) => {
-  Violation.find({}, function(err, violations){
-    res.render('employees', {
-      violationsList: violations
+  Violation.find({})
+    .then(violations => {
+      res.render('employees', {
+        violationsList: violations
+      });
     })
-  })
-})
+    .catch(err => {
+      // Handle the error if any
+      console.log(err);
+      res.status(500).send("Internal Server Error");
+    });
+});
 
 
 
 
-app.post("/", function(req, res){ let newViolation = new Violation({ 
-  state: req.body.state, 
-  plateNumber: req.body.platenumber, 
-  date: req.body.date, 
-  location: req.body.location, 
-  infraction: req.body.infraction }); 
+app.post("/", function(req, res){ let newViolation = new Violation({
+  state: req.body.state,
+  plateNumber: req.body.platenumber,
+  date: req.body.date,
+  location: req.body.location,
+  infraction: req.body.infraction });
   newViolation.save(); res.redirect('/'); })
 
 // Links
-app.get('/', (req, res) => { 
-  res.render('index'); 
+app.get('/', (req, res) => {
+  res.render('index');
 })
 
-app.get('/about', (req, res) => { 
-  res.render('about'); 
+app.get('/about', (req, res) => {
+  res.render('about');
 })
 
-app.get('/contact', (req, res) => { 
-  res.render('contact'); 
+app.get('/contact', (req, res) => {
+  res.render('contact');
 })
 
-app.get('/lookup', (req, res) => { 
-  res.render('lookup'); 
-})
-    
-app.get('/employees', (req, res) => { 
-  res.render('employees.ejs'); 
+app.get('/lookup', (req, res) => {
+  res.render('lookup');
 })
 
-app.get('/', function(req, res) { 
-  res.sendFile(__dirname + "/employees.ejs") 
+app.get('/employees', (req, res) => {
+  res.render('employees.ejs');
+})
+
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + "/employees.ejs")
 })
 
 app.get("/", function(req, res) { res.sendFile(__dirname + "/employees.ejs") })

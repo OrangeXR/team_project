@@ -18,9 +18,10 @@ const client = new MongoClient(url);
          const db = client.db(dbName);
 
          // Use the collection "violation"
-         const col = db.collection("violation");
+         const col = db.collection("violations");
 
-         // Construct a document                                                                                                                                                              
+         // Construct a document
+
          // let personDocument = {
          //     "name": { "first": "Alan", "last": "Turing" },
          //     "birth": new Date(1912, 5, 23), // May 23, 1912                                                                                                                                 
